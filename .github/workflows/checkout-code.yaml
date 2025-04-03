@@ -5,7 +5,7 @@ on:
 
 jobs:
   checkout:
-    runs-on: ubuntu-latest
+    runs-on: hexa-runner
 
     steps:
     - name: Checkout code
