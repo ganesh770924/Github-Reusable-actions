@@ -1,0 +1,24 @@
+name: Checkout Code
+
+on:
+  workflow_call:
+    inputs:
+      pom-file-path:
+        description: 'Path to the pom.xml file'
+        required: true
+        type: string
+
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: List files for debugging
+      run: ls -R
+    - name: Print working directory
+      run: pwd
+    - name: Build with Maven
+      run: mvn -B package --file ${{inputs.pom-file-path}}
