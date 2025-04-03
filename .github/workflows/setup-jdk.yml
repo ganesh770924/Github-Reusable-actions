@@ -16,4 +16,9 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: ${{ inputs.java-version }}
+    - name: Set up Maven
+      run: |
+        $env:MAVEN_HOME = "C:\maven\apache-maven-3.9.9"
+        $env:PATH += ";C:\maven\apache-maven-3.9.9\bin"
+        mvn -version
     
