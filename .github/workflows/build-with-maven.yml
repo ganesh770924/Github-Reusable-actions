@@ -14,4 +14,4 @@ jobs:
 
     steps:
     - name: Build with Maven
-      run: mvn -B package --file ${{ inputs.pom-file-path }}
+      run: mvn -B package --file ${{inputs.pom-file-path}}
