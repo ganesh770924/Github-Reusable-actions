@@ -16,6 +16,6 @@ jobs:
     - name: Print working directory
       run: pwd
     - name: Build with Maven
-      run: mvn -B package --file /home/runner/work/CICDtestrepo/CICDtestrepo/pom.xml
+      run: mvn -B package --file "/home/runner/work/CICDtestrepo/CICDtestrepo/pom.xml"
     - name: Print working direct
       run: pwd
