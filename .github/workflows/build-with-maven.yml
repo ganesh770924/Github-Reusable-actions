@@ -18,6 +18,11 @@ jobs:
     # - name: List files for debugging
     #   run: ls -R
     - name: Build with Maven
-      run: mvn -B package --file ${{inputs.pom-file-path}}
+      run: | 
+            $env:MAVEN_HOME = "C:\maven\apache-maven-3.9.9"
+            $env:PATH += ";C:\maven\apache-maven-3.9.9\bin"
+            mvn -version
+            mvn -B package --file ${{inputs.pom-file-path}}
+           
     # - name: Print working direct
     #   run: pwd
