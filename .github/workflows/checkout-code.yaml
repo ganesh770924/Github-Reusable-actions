@@ -2,10 +2,15 @@ name: Checkout Code
 
 on:
   workflow_call:
+   inputs:
+     runner:
+        required: true
+        type: string
+   
 
 jobs:
   checkout:
-    runs-on: hexa-runner
+    runs-on: ${{ inputs.runner }}
 
     steps:
     - name: Checkout code
