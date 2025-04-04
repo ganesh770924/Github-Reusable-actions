@@ -15,12 +15,15 @@ jobs:
       - name: Determine runner
         id: set-runner
         run: |
-          if [ "${{ inputs.repo }}" == "owner/repo1" ]; then
+          if [ "${{ inputs.repo }}" == "ganesh770924/CICDtestrepo" ]; then
             echo "runner=ubuntu-latest" >> $GITHUB_OUTPUT
+            echo "$GITHUB_OUTPUT"
           elif [ "${{ inputs.repo }}" == "owner/repo2" ]; then
             echo "runner=hexa-runner" >> $GITHUB_OUTPUT
+            echo "$GITHUB_OUTPUT"
           else
             echo "runner=ubuntu-latest" >> $GITHUB_OUTPUT
+            echo "$GITHUB_OUTPUT"
     outputs:
      runner: ${{ steps.set-runner.outputs.runner }}
         
