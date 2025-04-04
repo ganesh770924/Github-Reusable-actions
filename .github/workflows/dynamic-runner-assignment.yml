@@ -24,6 +24,6 @@ jobs:
           # else
           #   echo "runner=ubuntu-latest" >> $GITHUB_OUTPUT
           #   echo "$GITHUB_OUTPUT"
-    outputs:
-     runner: ${{ steps.set-runner.outputs.runner }}
+    # outputs:
+    #  runner: ${{ steps.set-runner.outputs.runner }}
         
