@@ -10,8 +10,7 @@ on:
 jobs:
   determine-runner:
     runs-on: ubuntu-latest
-    outputs:
-      runner: ${{ steps.set-runner.outputs.runner }}
+
     steps:
       - name: Determine runner
         id: set-runner
@@ -22,3 +21,6 @@ jobs:
             echo "runner=hexa-runner" >> $GITHUB_OUTPUT
           else
             echo "runner=ubuntu-latest" >> $GITHUB_OUTPUT
+    outputs:
+     runner: ${{ steps.set-runner.outputs.runner }}
+        
